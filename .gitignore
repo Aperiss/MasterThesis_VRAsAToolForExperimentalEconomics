@@ -2,13 +2,13 @@
 #     https://github.com/github/gitignore/blob/master/Unity.gitignore
 
 Project/VR_Experiment/[Ll]ibrary/
-Project/VR_Experiment//[Uu]serSettings/
+Project/VR_Experiment/[Uu]serSettings/
 [Tt]emp/
 [Oo]bj/
-Project/VR_Experiment//[Bb]uild/
-Project/VR_Experiment//[Bb]uilds/
-Project/VR_Experiment//[Ll]ogs/
-Project/VR_Experiment//[Mm]emoryCaptures/
+Project/VR_Experiment/[Bb]uild/
+Project/VR_Experiment/[Bb]uilds/
+Project/VR_Experiment/[Ll]ogs/
+Project/VR_Experiment/[Mm]emoryCaptures/
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # [Aa]ssets/AssetStoreTools*

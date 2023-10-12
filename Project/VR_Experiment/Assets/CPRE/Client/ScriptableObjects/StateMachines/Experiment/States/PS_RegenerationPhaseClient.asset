@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 217237ed251984355b7a135c2eaf00aa, type: 3}
+  m_Name: PS_RegenerationPhaseClient
+  m_EditorClassIdentifier: 
+  entryActions:
+  - {fileID: 11400000, guid: 1bc542882fdab4d6db6f82eb2506ef9a, type: 2}
+  stateActions: []
+  exitActions:
+  - {fileID: 11400000, guid: b860be41e50dd481db1ff6d09708a752, type: 2}
+  transitions:
+  - conditions:
+    - {fileID: 11400000, guid: 77a1d665ab9314758a4f14040ac6f82b, type: 2}
+    trueState: {fileID: 11400000, guid: 83b621372f6f9495ca5c710abd8668fa, type: 2}
+    falseState: {fileID: 11400000, guid: b162952d9f35242deb2e1a0d1acfa4f2, type: 2}

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2ea0ded414942e38556e9ba9deed6e0, type: 3}
+  m_Name: ExperimentNetworkAssetManagementProtocol
+  m_EditorClassIdentifier: 
+  groups: {fileID: 11400000, guid: 5d0da48e3289f440984660f070814f4c, type: 2}
+  participants: {fileID: 11400000, guid: a54e973afb31a4dce8483306e6f0b0a2, type: 2}
+  commonPools: {fileID: 11400000, guid: 11c06217b775747da9873b53220c0a51, type: 2}
+  commonPoolPrefab: {fileID: 8595938708011658274, guid: a7cd68c0de5e6400fbffcd5abb4b49ea, type: 3}
+  sessionManagerPrefab: {fileID: 1823442687661275484, guid: 9889917887c2a470e93bc8820178b73f, type: 3}

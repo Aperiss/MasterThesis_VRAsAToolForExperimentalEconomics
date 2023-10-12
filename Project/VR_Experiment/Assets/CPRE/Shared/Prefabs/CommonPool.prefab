@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8595938708011658274
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8595938708011658279}
+  - component: {fileID: 8595938708011658277}
+  - component: {fileID: 8196232891671341429}
+  m_Layer: 0
+  m_Name: CommonPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8595938708011658279
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8595938708011658274}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8595938708011658277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8595938708011658274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 951099334
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 0
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 0
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
+--- !u!114 &8196232891671341429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8595938708011658274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fdcefc3659f4ea1aaab586eafb449f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentResourcesReference:
+    _useDirect: 0
+    _directValue: 0
+    _variableReference: {fileID: 11400000, guid: 7f01b69d288c14cd185757dc6e6c67b4, type: 2}
+  maxCapacityReference:
+    _useDirect: 0
+    _directValue: 0
+    _variableReference: {fileID: 11400000, guid: 35b68b2b7be864dabbe5975f7e4f116e, type: 2}
+  allowedExtractionsPerParticipantReference:
+    _useDirect: 0
+    _directValue: 0
+    _variableReference: {fileID: 11400000, guid: 051514b9a239d467fa82496412f28271, type: 2}
+  resourceRegenerationRateReference:
+    _useDirect: 0
+    _directValue: 0
+    _variableReference: {fileID: 11400000, guid: 7cbd851658ece40908ef631c8a66827b, type: 2}
+  beginExtractionProcessEventChannel: {fileID: 11400000, guid: 85dbce849588049238e0326030a31577, type: 2}
+  extractResourceEventChannel: {fileID: 11400000, guid: 9368e373b8c18406d946ebcb8c33a1cd, type: 2}
+  endExtractionProcessEventChannel: {fileID: 11400000, guid: 98271f6e4d6b8459b9676334535aa6a9, type: 2}
+  beginRegenerationProcessEventChannel: {fileID: 11400000, guid: 5141aece089c446a7a0dba81524a12fe, type: 2}
+  regenerateResourceEventChannel: {fileID: 11400000, guid: 6cf14b1e673494bc88ee5c3140094302, type: 2}
+  endRegenerationProcessEventChannel: {fileID: 11400000, guid: 1e1377532ac2e42f48ed08ac47bd059e, type: 2}
+  extractionsCompletedEventChannel: {fileID: 11400000, guid: d859bcd8976ef40f197d8725d8e7c220, type: 2}

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 217237ed251984355b7a135c2eaf00aa, type: 3}
+  m_Name: PS_WaitingForManufacturingEndPhase
+  m_EditorClassIdentifier: 
+  entryActions:
+  - {fileID: 11400000, guid: 8bab32e1da03e48e5a47030c4e776db2, type: 2}
+  stateActions: []
+  exitActions:
+  - {fileID: 11400000, guid: 826e200a52044402aaa27de5d4343a56, type: 2}
+  transitions:
+  - conditions:
+    - {fileID: 11400000, guid: a1401813797e04970b2fddb9dca78ded, type: 2}
+    trueState: {fileID: 11400000, guid: 5a32177af114a4fb082ac6dc4586ba0c, type: 2}
+    falseState: {fileID: 11400000, guid: b162952d9f35242deb2e1a0d1acfa4f2, type: 2}

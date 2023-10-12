@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7145767721922342388
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7145767721922342386}
+  - component: {fileID: 7145767721922342389}
+  - component: {fileID: 7145767721922342387}
+  m_Layer: 0
+  m_Name: Client Connection Handler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7145767721922342386
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7145767721922342388}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7145767721922342389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7145767721922342388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da2e0c8bd63e4522bda409aec95788b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ipAddress:
+    _useConstant: 0
+    _constantValue: 
+    _variable: {fileID: 11400000, guid: 6d24a0fcec0194b50a3736b98688cad2, type: 2}
+  port:
+    _useConstant: 0
+    _constantValue: 7777
+    _variable: {fileID: 11400000, guid: 48f76cad0863e432d85c9c9dd6c09089, type: 2}
+  requestedParticipantId:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: fcceff5746b6746238461c4e46773e2f, type: 2}
+  participantId:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: 10057117f2b8445fcbc1b079eb46225d, type: 2}
+  connectionInfoOutput:
+    _useConstant: 0
+    _constantValue: 
+    _variable: {fileID: 11400000, guid: a7731a2780d6b4b3b8483bfbb00d8d0d, type: 2}
+--- !u!114 &7145767721922342387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7145767721922342388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b66b9f4ead464848b52560c72ec6539, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 11400000, guid: 2552e0253830f4c0ba3bab4bd503bb53, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7145767721922342389}
+        m_TargetAssemblyTypeName: CPRE.Scripts.ConnectionManagement.ClientConnectionHandler,
+          Assembly-CSharp
+        m_MethodName: AttemptConnectionToServer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

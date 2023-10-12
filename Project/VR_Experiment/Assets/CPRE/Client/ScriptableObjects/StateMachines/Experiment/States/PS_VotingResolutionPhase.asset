@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 217237ed251984355b7a135c2eaf00aa, type: 3}
+  m_Name: PS_VotingResolutionPhase
+  m_EditorClassIdentifier: 
+  entryActions:
+  - {fileID: 11400000, guid: 95188541084214017a4437cbc180311f, type: 2}
+  stateActions: []
+  exitActions:
+  - {fileID: 11400000, guid: aa27b8e340e38436c870c140aa828789, type: 2}
+  transitions:
+  - conditions:
+    - {fileID: 11400000, guid: 46a14fad84a2848d58dacbaa6c72bb43, type: 2}
+    trueState: {fileID: 11400000, guid: 83b621372f6f9495ca5c710abd8668fa, type: 2}
+    falseState: {fileID: 11400000, guid: b162952d9f35242deb2e1a0d1acfa4f2, type: 2}
+  - conditions:
+    - {fileID: 11400000, guid: 12d29d58f928942868a7003bf78a1d34, type: 2}
+    trueState: {fileID: 11400000, guid: 36342c80309b146a08896b818232b523, type: 2}
+    falseState: {fileID: 11400000, guid: b162952d9f35242deb2e1a0d1acfa4f2, type: 2}

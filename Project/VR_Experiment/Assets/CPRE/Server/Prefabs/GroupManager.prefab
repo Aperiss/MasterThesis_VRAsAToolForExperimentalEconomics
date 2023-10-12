@@ -1,0 +1,493 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6037149333023144383
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6037149333023144382}
+  m_Layer: 0
+  m_Name: GroupManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6037149333023144382
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6037149333023144383}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6037149333924698063}
+  - {fileID: 6037149333362289784}
+  - {fileID: 6037149333271293253}
+  - {fileID: 6037149333360902275}
+  - {fileID: 6037149333773699949}
+  - {fileID: 6037149334965154776}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6037149333271293250
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6037149333271293253}
+  - component: {fileID: 6037149333271293257}
+  m_Layer: 0
+  m_Name: GroupAssignmentManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6037149333271293253
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6037149333271293250}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6037149333023144382}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6037149333271293257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6037149333271293250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2011181f1c6148ef925dafe4a8bb9c5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxGroupSize:
+    _useConstant: 0
+    _constantValue: 3
+    _variable: {fileID: 11400000, guid: 3c029f956485e41989af2edcc30d03c5, type: 2}
+  groups: {fileID: 11400000, guid: 5d0da48e3289f440984660f070814f4c, type: 2}
+  participants: {fileID: 11400000, guid: a54e973afb31a4dce8483306e6f0b0a2, type: 2}
+  commonPools: {fileID: 11400000, guid: 11c06217b775747da9873b53220c0a51, type: 2}
+  sessionManagers: {fileID: 11400000, guid: 37793e97b604344519822fb7bf9651d5, type: 2}
+--- !u!1 &6037149333360902272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6037149333360902275}
+  - component: {fileID: 6037149333360902277}
+  - component: {fileID: 6037149333360902274}
+  m_Layer: 0
+  m_Name: GroupEventObserver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6037149333360902275
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6037149333360902272}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6037149333023144382}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6037149333360902277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6037149333360902272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 521ff17ab92042af8d3ea19d8e47cb22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groups: {fileID: 11400000, guid: 5d0da48e3289f440984660f070814f4c, type: 2}
+--- !u!114 &6037149333360902274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6037149333360902272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23a78b9e630049408cfcdcc8c6d0eb11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 11400000, guid: 6eb8258faa56e43c48427b909fa5ca87, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6037149333360902277}
+        m_TargetAssemblyTypeName: CPRE.Scripts.Experiment.GroupEventObserver, Assembly-CSharp
+        m_MethodName: OnParticipantRequestedExtraction
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &6037149333362289782
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6037149333362289784}
+  - component: {fileID: 6037149333362289785}
+  - component: {fileID: 6037149333362289787}
+  m_Layer: 0
+  m_Name: GroupDisposer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6037149333362289784
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6037149333362289782}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6037149333023144382}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6037149333362289785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6037149333362289782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64c8548921ee45769ffcc3db4d866888, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groups: {fileID: 11400000, guid: 5d0da48e3289f440984660f070814f4c, type: 2}
+  commonPools: {fileID: 11400000, guid: 11c06217b775747da9873b53220c0a51, type: 2}
+  sessionManagers: {fileID: 11400000, guid: 37793e97b604344519822fb7bf9651d5, type: 2}
+  groupDeletedEventChannel: {fileID: 11400000, guid: cdca2136ca6884b4c95bc9587bcc592c, type: 2}
+--- !u!114 &6037149333362289787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6037149333362289782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b66b9f4ead464848b52560c72ec6539, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 11400000, guid: 26a477f0d17a6453aa72ece4e2751421, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6037149333362289785}
+        m_TargetAssemblyTypeName: CPRE.Scripts.Experiment.GroupDisposer, Assembly-CSharp
+        m_MethodName: DeleteGroup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &6037149333773699947
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6037149333773699949}
+  - component: {fileID: 6037149333773699946}
+  - component: {fileID: 6037149333773699948}
+  m_Layer: 0
+  m_Name: CommonPoolFactory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6037149333773699949
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6037149333773699947}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6037149333023144382}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6037149333773699946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6037149333773699947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab15be75b82d4f2f982db7650702ea62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commonPools: {fileID: 11400000, guid: 11c06217b775747da9873b53220c0a51, type: 2}
+  commonPoolPrefab: {fileID: 8595938708011658274, guid: a7cd68c0de5e6400fbffcd5abb4b49ea, type: 3}
+  commonPoolMaxResources:
+    _useConstant: 0
+    _constantValue: 1
+    _variable: {fileID: 11400000, guid: 35b68b2b7be864dabbe5975f7e4f116e, type: 2}
+  commonPoolInitialResources:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: df14c1a6ce40c4cf09bb64c472d01a67, type: 2}
+  commonPoolRegenerationRate:
+    _useConstant: 0
+    _constantValue: 2
+    _variable: {fileID: 11400000, guid: 7cbd851658ece40908ef631c8a66827b, type: 2}
+  commonPoolExtractionRate:
+    _useConstant: 0
+    _constantValue: 3
+    _variable: {fileID: 11400000, guid: 051514b9a239d467fa82496412f28271, type: 2}
+  extractResourcesEventChannel: {fileID: 11400000, guid: 9368e373b8c18406d946ebcb8c33a1cd, type: 2}
+  regenerateResourcesEventChannel: {fileID: 11400000, guid: 6cf14b1e673494bc88ee5c3140094302, type: 2}
+--- !u!114 &6037149333773699948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6037149333773699947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67d333db2e0d74a3bbcd129fb2ed22d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 11400000, guid: f1ccf1c51c175427d8f444bbf77a152b, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6037149333773699946}
+        m_TargetAssemblyTypeName: CPRE.Scripts.Experiment.CommonPoolFactory, Assembly-CSharp
+        m_MethodName: CreateCommonPool
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &6037149333924698061
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6037149333924698063}
+  - component: {fileID: 6037149333924698060}
+  - component: {fileID: 6037149333924698097}
+  m_Layer: 0
+  m_Name: GroupFactory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6037149333924698063
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6037149333924698061}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6037149333023144382}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6037149333924698060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6037149333924698061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 440de815be1349c889ca6f27f5800b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groups: {fileID: 11400000, guid: 5d0da48e3289f440984660f070814f4c, type: 2}
+  maxNumberOfGroups:
+    _useConstant: 0
+    _constantValue: 3
+    _variable: {fileID: 11400000, guid: e4fea5149e95045308d0c51cdd1eb423, type: 2}
+  extractionResponseEventChannel: {fileID: 11400000, guid: 3453f0bf0245a44cb960358ee6deba4c, type: 2}
+  groupCreatedEventChannel: {fileID: 11400000, guid: f1ccf1c51c175427d8f444bbf77a152b, type: 2}
+--- !u!114 &6037149333924698097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6037149333924698061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b66b9f4ead464848b52560c72ec6539, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 11400000, guid: ddcfb42e26c3a4d718502c2d8809bec9, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6037149333924698060}
+        m_TargetAssemblyTypeName: CPRE.Scripts.Experiment.GroupFactory, Assembly-CSharp
+        m_MethodName: CreateGroup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &6037149334965154775
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6037149334965154776}
+  - component: {fileID: 6037149334965154777}
+  - component: {fileID: 6037149334965154774}
+  m_Layer: 0
+  m_Name: SessionManagerFactory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6037149334965154776
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6037149334965154775}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6037149333023144382}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6037149334965154777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6037149334965154775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf821b3be8c34994b3b4ad6ca22e42b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sessionManagerRuntimeSet: {fileID: 11400000, guid: 37793e97b604344519822fb7bf9651d5, type: 2}
+  sessionManagerPrefab: {fileID: 8179718022860893188, guid: 20fed168322134cfcb347af94dda7ba3, type: 3}
+  startExperimentEventChannel: {fileID: 11400000, guid: 3c28137d50fbb4f8fb06a10e09679a6e, type: 2}
+  endExperimentEventChannel: {fileID: 11400000, guid: 0444e51e931084a2990e79c9ef9d4969, type: 2}
+--- !u!114 &6037149334965154774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6037149334965154775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67d333db2e0d74a3bbcd129fb2ed22d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 11400000, guid: f1ccf1c51c175427d8f444bbf77a152b, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6037149334965154777}
+        m_TargetAssemblyTypeName: CPRE.Scripts.Experiment.SessionManagerFactory,
+          Assembly-CSharp
+        m_MethodName: CreateSessionManager
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38a102fc810e41e6ac3bf35115be98b3, type: 3}
+  m_Name: ServerConnectionManagerConfiguration
+  m_EditorClassIdentifier: 
+  connectionApprovalManager: {fileID: 11400000, guid: d0cb9b2f3fc2d473c84411b8e2db8ece, type: 2}
+  clientConnectionsHandler: {fileID: 11400000, guid: 412ea622eea634db696987e83b7235a4, type: 2}
+  networkObjectManager: {fileID: 11400000, guid: e63ff5316718f4759859d68a886d92ef, type: 2}

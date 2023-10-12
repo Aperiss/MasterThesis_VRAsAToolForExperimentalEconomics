@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8179718022860893188
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8179718022860893185}
+  - component: {fileID: 8179718022860893191}
+  - component: {fileID: 8179718022860893190}
+  - component: {fileID: -8421919533859698581}
+  m_Layer: 0
+  m_Name: SessionManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8179718022860893185
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8179718022860893188}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8179718022860893191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8179718022860893188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 951099334
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 0
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 0
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
+--- !u!114 &8179718022860893190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8179718022860893188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89d0d697af7a4c1da06c2de0a9c04404, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  treatmentId:
+    m_InternalValue: 0
+  currentRound:
+    m_InternalValue: 0
+  treatmentIdReference:
+    _useDirect: 0
+    _directValue: 0
+    _variableReference: {fileID: 11400000, guid: 023765a6972c94b2aa9a3993a18ce731, type: 2}
+  currentRoundReference:
+    _useDirect: 0
+    _directValue: 0
+    _variableReference: {fileID: 11400000, guid: 4c9ca8d6ea6c64c39b16afd4c8e2f349, type: 2}
+  voteResultReference:
+    _useDirect: 0
+    _directValue: 0
+    _variableReference: {fileID: 11400000, guid: 8dc0b5496da134ac8b2f01a273bc8632, type: 2}
+  startExperimentEventChannel: {fileID: 11400000, guid: 559a48aa34b1347779de807f95a7197f, type: 2}
+  endExperimentEventChannel: {fileID: 11400000, guid: 4f4c2c59e1590499083b0b12d704d970, type: 2}
+  allParticipantsVotedEventChannel: {fileID: 11400000, guid: 97b072764f53048a5af2712889fecc94, type: 2}
+  continueExtractionsEventChannel: {fileID: 11400000, guid: d4454534dd20f4fe9830189ec7e10d46, type: 2}
+  dontContinueExtractionsEventChannel: {fileID: 11400000, guid: 8cc1b8654dd8a46b9b4fb49b76ea635b, type: 2}
+  endManufacturingPhaseEventChannel: {fileID: 11400000, guid: 6cbdfc90183694fb3a97c2e94bbdcd47, type: 2}
+  endRoundEventChannel: {fileID: 11400000, guid: a5fa29c25bea94412baf69dd9b0729c7, type: 2}
+  notifyNextRoundEventChannel: {fileID: 11400000, guid: f032adc6a770447d78b2cd0f380230fa, type: 2}
+--- !u!114 &-8421919533859698581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8179718022860893188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b66b9f4ead464848b52560c72ec6539, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 11400000, guid: 23a305146e56f49c2ab84dcfbe284614, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8179718022860893190}
+        m_TargetAssemblyTypeName: CPRE.Scripts.Experiment.SessionManager, Assembly-CSharp
+        m_MethodName: StartExperiment
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

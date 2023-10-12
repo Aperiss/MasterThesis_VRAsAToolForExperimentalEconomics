@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 217237ed251984355b7a135c2eaf00aa, type: 3}
+  m_Name: PS_ExtractionRequestPhase
+  m_EditorClassIdentifier: 
+  entryActions:
+  - {fileID: 11400000, guid: 4872666ed6da14023bc0befac4b544a5, type: 2}
+  stateActions: []
+  exitActions:
+  - {fileID: 11400000, guid: ab510b70c25ac41068aba4007e5c67c9, type: 2}
+  transitions:
+  - conditions:
+    - {fileID: 11400000, guid: 6895f6638747845278ff51abe45c5a7c, type: 2}
+    trueState: {fileID: 11400000, guid: 17d996589d67c4f7cbe1268102f4307f, type: 2}
+    falseState: {fileID: 11400000, guid: b162952d9f35242deb2e1a0d1acfa4f2, type: 2}
