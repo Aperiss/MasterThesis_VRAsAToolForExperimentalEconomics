@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &127751446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,9 +152,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2e11c78fb051409697d531fc8bc6930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  serverSceneDatabase: {fileID: 11400000, guid: cf61b10b37218470fa437de83a068a7b, type: 2}
-  clientSceneDatabase: {fileID: 0}
-  isServer: 0
+  serverSceneDatabase: {fileID: 11400000, guid: c4a3b9ab7f2354cd0997400f4497c087, type: 2}
+  clientSceneDatabase: {fileID: 11400000, guid: 05663cf79d5644eacb67b3dd0e6a293a, type: 2}
+  isServer: 1
 --- !u!4 &127751447
 Transform:
   m_ObjectHideFlags: 0

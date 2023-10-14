@@ -7,6 +7,7 @@ namespace CPRE.Scripts.SceneManagement {
         [SerializeField] private ScenesData serverSceneDatabase;
         [SerializeField] private ScenesData clientSceneDatabase;
         [SerializeField] private bool isServer;
+        
         private void Awake() {
             if(isServer) {
                 LoadServerScene();
@@ -17,10 +18,11 @@ namespace CPRE.Scripts.SceneManagement {
     
         public void LoadServerScene() {
             serverSceneDatabase.LoadSceneByIndex(0);
+            serverSceneDatabase.LoadSceneByIndex(1);
         }
 
         public void LoadClientScene() {
-            SceneManager.LoadSceneAsync("Client_Core", LoadSceneMode.Additive);
+            clientSceneDatabase.LoadSceneByIndex(0);
         }
     }
 }
