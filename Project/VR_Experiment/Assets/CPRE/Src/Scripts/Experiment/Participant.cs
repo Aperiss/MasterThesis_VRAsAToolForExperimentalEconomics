@@ -25,6 +25,7 @@ namespace CPRE.Scripts.Experiment {
         [Header("Variable References")]
         [SerializeField] private IntReference participantIdReference;
         [SerializeField] private IntReference logsExtractedReference;
+        [SerializeField] private IntReference participantExtractionsThisRoundReference;
         [SerializeField] private IntReference tokensReference;
 
         [Header("ClientEvents")]
@@ -58,7 +59,6 @@ namespace CPRE.Scripts.Experiment {
         [ServerRpc]
         private void RequestNextRoundServerRpc() {
             Debug.Log($"Participant {participantID.Value} requested new round.");
-            
         }
         
         public void RequestExtraction(int amount) {
@@ -95,6 +95,7 @@ namespace CPRE.Scripts.Experiment {
         [ClientRpc]
         private void NotifyExtractionResponseClientRpc(int amount) {
             Debug.Log($"Extraction approved, extracting...{amount}");
+            participantExtractionsThisRoundReference.Value += amount;
             StartCoroutine(AddLogsToStockpile(amount, 1f));
         }
         
@@ -138,6 +139,7 @@ namespace CPRE.Scripts.Experiment {
         
         public void OnAllLogsManufactured() {
             if (!IsOwner) return;
+            participantExtractionsThisRoundReference.Value = 0;
             OnAllLogsManufacturedServerRpc();
         }
         

@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serverSceneDatabase: {fileID: 11400000, guid: c4a3b9ab7f2354cd0997400f4497c087, type: 2}
   clientSceneDatabase: {fileID: 11400000, guid: 05663cf79d5644eacb67b3dd0e6a293a, type: 2}
-  isServer: 1
+  isServer: 0
 --- !u!4 &127751447
 Transform:
   m_ObjectHideFlags: 0

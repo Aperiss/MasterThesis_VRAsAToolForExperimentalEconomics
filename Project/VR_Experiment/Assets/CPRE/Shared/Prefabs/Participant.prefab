@@ -87,6 +87,10 @@ MonoBehaviour:
     _useDirect: 0
     _directValue: 0
     _variableReference: {fileID: 11400000, guid: 4c7e02b2129d04877823f6b14348ea2a, type: 2}
+  participantExtractionsThisRoundReference:
+    _useDirect: 0
+    _directValue: 0
+    _variableReference: {fileID: 11400000, guid: 81000549cf11948d3b4af1ac45ca5f85, type: 2}
   tokensReference:
     _useDirect: 0
     _directValue: 0

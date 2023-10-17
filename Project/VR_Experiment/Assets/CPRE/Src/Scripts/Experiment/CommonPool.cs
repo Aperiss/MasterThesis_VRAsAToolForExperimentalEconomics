@@ -24,6 +24,7 @@ namespace CPRE.Scripts.Experiment {
         [SerializeField] private IntReference maxCapacityReference;
         [SerializeField] private IntReference allowedExtractionsPerParticipantReference;
         [SerializeField] private IntReference resourceRegenerationRateReference;
+        [SerializeField] private IntReference extractionsThisRoundReference;
 
         [Header("Client Events")] 
         [SerializeField] private VoidEventChannel beginExtractionProcessEventChannel;
@@ -190,6 +191,7 @@ namespace CPRE.Scripts.Experiment {
         private void NotifyExtractionClientRpc(int extractedAmount) {
             Log($"Extracted: {extractedAmount}");
             extractResourceEventChannel.Raise(extractedAmount);
+            extractionsThisRoundReference.Value += extractedAmount;
         }
         
         [ClientRpc]
@@ -202,6 +204,7 @@ namespace CPRE.Scripts.Experiment {
         private void NotifyBeginRegenerationProcessClientRpc(int regenerationAmount) {
             Log($"Regeneration of {regenerationAmount} resources is about to start...");
             beginRegenerationProcessEventChannel.Raise();
+            extractionsThisRoundReference.Value = 0;
         }
 
         [ClientRpc]
@@ -252,113 +255,3 @@ namespace CPRE.Scripts.Experiment {
         #endregion
     }
 }
-
-
-// using System;
-// using CPRE.SOFramework.DataContainers.Variables;
-// using CPRE.SOFramework.EventSystem.Channels;
-// using Unity.Netcode;
-// using UnityEngine;
-// using UnityEngine.Serialization;
-//
-// namespace CPRE.Scripts.Experiment {
-//     public class CommonPool : NetworkBehaviour {
-//         
-//         [Header("Network Variables")]
-//         public NetworkVariable<int> resourcesInPool = new NetworkVariable<int>();
-//         public NetworkVariable<int> capacity;
-//         public NetworkVariable<int> currentAllowedExtractionsPerRoundPerParticipant;
-//         public NetworkVariable<int> regenerationRate;
-//
-//         [Header("Variable References")]
-//         [SerializeField] private IntReference resourcesInPoolReference;
-//         [SerializeField] private IntReference capacityReference;
-//         [SerializeField] private IntReference maxExtractionsPerRoundReference;
-//         [SerializeField] private IntReference currentAllowedExtractionsPerRoundPerParticipantReference;
-//         [SerializeField] private IntReference regenerationRateReference;
-//
-//         [Header("Events")] 
-//         [SerializeField] private IntEventChannel extractionEventChannel;
-//         [SerializeField] private IntEventChannel regenerationEventChannel;
-//
-//         private int _groupSize;
-//         private int _maxExtractionsPerRoundPerParticipant;
-//         private int _maxExtractionsPerRound;
-//         private int _currentAllowedExtractionsPerRound;
-//         private int _extractionsRequestedThisRound = 0;
-//         
-//         private int _groupId;
-//         public int GroupId => _groupId;
-//         
-//         public void Initialize(ushort groupId, int capacity, int initialResources, int maxExtractionsPerRound, int regenerationRate, IntEventChannel extractionEventChannel, IntEventChannel regenerationEventChannel) {
-//             _groupId = groupId;
-//             this.capacity.Value = capacity;
-//             this.regenerationRate.Value = regenerationRate;
-//             this.extractionEventChannel = extractionEventChannel;
-//             this.regenerationEventChannel = regenerationEventChannel;
-//             currentAllowedExtractionsPerRoundPerParticipant.Value = maxExtractionsPerRound;
-//             resourcesInPool.Value = initialResources;
-//             _maxExtractionsPerRoundPerParticipant = maxExtractionsPerRound;
-//         }
-//
-//         public void SetGroupSize(int groupSize) {
-//             _groupSize = groupSize;
-//             _maxExtractionsPerRound = _maxExtractionsPerRoundPerParticipant * _groupSize;
-//             _currentAllowedExtractionsPerRound = _maxExtractionsPerRound;
-//         }
-//         
-//         public void Update() {
-//             if (IsServer) return;
-//             resourcesInPoolReference.Value = resourcesInPool.Value;
-//             capacityReference.Value = capacity.Value;
-//             maxExtractionsPerRoundReference.Value = _maxExtractionsPerRound;
-//             currentAllowedExtractionsPerRoundPerParticipantReference.Value = currentAllowedExtractionsPerRoundPerParticipant.Value;
-//             regenerationRateReference.Value = regenerationRate.Value;
-//         }
-//
-//         public void DeleteCommonPool() {
-//             Destroy(gameObject);
-//         }
-//         
-//         public bool ExtractResources(int amount) {
-//             if (amount > _currentAllowedExtractionsPerRound - _extractionsRequestedThisRound) {
-//                 Debug.Log($"Extraction failed. Requested: {amount}. Allowed: {_currentAllowedExtractionsPerRound - _extractionsRequestedThisRound}");
-//                 return false;
-//             }
-//             if (amount > resourcesInPool.Value) {
-//                 Debug.Log($"Extraction failed. Requested: {amount}. Available: {resourcesInPool.Value}");
-//                 return false;
-//             }
-//             resourcesInPool.Value -= amount;
-//             _extractionsRequestedThisRound += amount;
-//             extractionEventChannel.Raise(amount);
-//             CheckNewExtractionLimit();
-//             Debug.Log($"Extracted {amount} resources from the common pool. Remaining: {resourcesInPool.Value}, Extractions This Round: {_extractionsRequestedThisRound}");
-//             return true;
-//         }
-//
-//         public void RegenerateResources() {
-//             int previousResourcesInPool = resourcesInPool.Value;
-//             resourcesInPool.Value += regenerationRate.Value;
-//             var regenerationAmount = regenerationRate.Value;
-//
-//             if (resourcesInPool.Value > capacity.Value) {
-//                 regenerationAmount = resourcesInPool.Value - capacity.Value;
-//                 resourcesInPool.Value = capacity.Value;
-//             }
-//             regenerationEventChannel.Raise(regenerationAmount);
-//             Debug.Log($"Resources regenerated. Previous: {previousResourcesInPool}, Current: {resourcesInPool.Value}, Regenerated: {regenerationAmount}");
-//         }
-//
-//         public void CheckNewExtractionLimit() {
-//             if (resourcesInPool.Value < _currentAllowedExtractionsPerRound)
-//                 _currentAllowedExtractionsPerRound = resourcesInPool.Value;
-//             else
-//                 _currentAllowedExtractionsPerRound = _maxExtractionsPerRound;
-//         }
-//
-//         public void ResetExtractionsThisRound() {
-//             _extractionsRequestedThisRound = 0;
-//         }
-//     }
-// }

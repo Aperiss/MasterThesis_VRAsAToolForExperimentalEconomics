@@ -1174,7 +1174,7 @@ Transform:
   m_GameObject: {fileID: 6461914265632827368}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
   m_LocalPosition: {x: -3.696, y: 1.765, z: -10.562}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2999833196466036520}
@@ -1449,7 +1449,7 @@ MonoBehaviour:
   KeepPlayModeChanges: 0
   PerformanceMode: 0
   StopFeedbacksOnDisable: 0
-  PlayCount: 1
+  PlayCount: 7
   references:
     version: 2
     RefIds:

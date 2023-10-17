@@ -54,7 +54,7 @@ namespace CPRE.Scripts.VRInteraction {
             if(player != null)
             {
                 player.PlayFeedbacks();
-                float duration = player.TotalDuration - 0.5f;
+                float duration = player.TotalDuration;
                 Debug.Log(duration);
                 StartCoroutine(AnimationDelay(duration));
             }
@@ -63,9 +63,8 @@ namespace CPRE.Scripts.VRInteraction {
         private IEnumerator AnimationDelay(float delay)
         {
             yield return new WaitForSeconds(delay);
-            NotifyManufactured();
-            yield return new WaitForSeconds(0.5f);
             OnAnimationEnded();
+            NotifyManufactured();
         }
 
         private void OnAnimationEnded()

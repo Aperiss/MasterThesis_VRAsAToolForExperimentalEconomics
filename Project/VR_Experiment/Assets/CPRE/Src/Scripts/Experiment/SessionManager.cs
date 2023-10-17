@@ -135,6 +135,10 @@ namespace CPRE.Scripts.Experiment {
         
         [ClientRpc]
         private void EndRoundClientRpc() {
+            if(currentRound.Value >= 15) {
+                EndExperiment();
+                return;
+            }
             endRoundEventChannel.Raise();
         }
         

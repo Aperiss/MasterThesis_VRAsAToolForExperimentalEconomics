@@ -13,10 +13,13 @@ namespace CPRE.Scripts.VRInteraction {
         [SerializeField] private TextMeshProUGUI screenOutput;
         
         private int _extractionsRequested = 1;
-        private int _minimumExtractions = 1;
+        private int _minimumExtractions = 0;
         
         public void Update() {
             UpdateScreenInformation();
+            if(maxExtractionsPerRound - resourcesExtractedThisRound < _extractionsRequested) {
+                _extractionsRequested = maxExtractionsPerRound - resourcesExtractedThisRound;
+            }
         }
         
         public void IncreaseSelectedAmount() {
@@ -39,11 +42,6 @@ namespace CPRE.Scripts.VRInteraction {
             requestExtractionEventChannel.Raise(extractions);
             _extractionsRequested = 0;
             _minimumExtractions = 0;
-        }
-
-        public void ResetExtractor() {
-            _minimumExtractions = 1;
-            _extractionsRequested = 1;
         }
         
         private void UpdateScreenInformation() {

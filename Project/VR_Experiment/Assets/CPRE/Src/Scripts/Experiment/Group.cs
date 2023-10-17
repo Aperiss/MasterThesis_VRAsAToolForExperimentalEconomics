@@ -33,6 +33,7 @@ namespace CPRE.Scripts.Experiment {
         
         public void AssignCommonPool(CommonPool pool) {
             commonPool = pool;
+            commonPool.SetTotalParticipants(groupSize);
             Debug.Log("Common pool assigned to group " + groupId);
         }
         public CommonPool GetCommonPool() {

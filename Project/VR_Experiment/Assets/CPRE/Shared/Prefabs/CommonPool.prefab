@@ -81,6 +81,10 @@ MonoBehaviour:
     _useDirect: 0
     _directValue: 0
     _variableReference: {fileID: 11400000, guid: 7cbd851658ece40908ef631c8a66827b, type: 2}
+  extractionsThisRoundReference:
+    _useDirect: 0
+    _directValue: 0
+    _variableReference: {fileID: 11400000, guid: 3fbf8c52e2f5043d5b9770c7c7cbe375, type: 2}
   beginExtractionProcessEventChannel: {fileID: 11400000, guid: 85dbce849588049238e0326030a31577, type: 2}
   extractResourceEventChannel: {fileID: 11400000, guid: 9368e373b8c18406d946ebcb8c33a1cd, type: 2}
   endExtractionProcessEventChannel: {fileID: 11400000, guid: 98271f6e4d6b8459b9676334535aa6a9, type: 2}
